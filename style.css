@@ -60,7 +60,17 @@ li a:hover {
 
 .container h4 {
   margin: 10px 0;
+  font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.img{
+  width: 301px;
+  height: 304px;
+}
+
+.reversed {
+  transform: rotateY(180deg);
 }
