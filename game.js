@@ -143,10 +143,7 @@ function battle(PNAME, PHP, PATK, PDEF, PMANA, ENAME, EHP, EATK, EDEF, EMANA){
             help();
         }
         // resets
-        if(PTurn == 1){
-            PDEF = PMAXDEF;
-            PTurn = 0;
-        }
+
         if(ETurn == 1){
             EDEF = EMAXDEF;
             ETurn = 0;
@@ -183,6 +180,12 @@ function battle(PNAME, PHP, PATK, PDEF, PMANA, ENAME, EHP, EATK, EDEF, EMANA){
         }else if(PHP <= 0){
             return "E"
         }
+    }
+
+    // resets II
+    if(PTurn == 1){
+        PDEF = PDEF / 2;
+        PTurn = 0;
     }
 }
 
