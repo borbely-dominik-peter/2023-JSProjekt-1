@@ -82,10 +82,10 @@ body{
   white-space: nowrap;
 }
 
-.img{
+/* .img{
   width: 302px;
   height: 305px;
-}
+} */
 
 .reversed {
   transform: rotateY(180deg);
