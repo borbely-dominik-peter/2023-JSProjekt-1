@@ -66,6 +66,7 @@ function FuncCheck() {
 }
 
 function QuizCheck(){
+    preventDefault();
     let points = 0
     
     // 1-kérdéshez változók
