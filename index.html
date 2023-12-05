@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Főoldal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Híres Programozók</title>
 </head>
 <body>
-    <div class="main">
-        <!--TESZTELÉS A JS-re-->
-        <span class="load" onload="new Char(500,80,10,30, 'Player')"></span>
-        <span class="load" onload="new Char(200,40,10,20, 'Enemy')"></span>
+    <div>
+        <ul>
+            <li>
+                <a href="index.html" aria-label="active">Fő oldal</a>
+            </li>
+            <li>
+                <a href="kodellenor.html">Kód Ellenőrző</a>
+            </li>
+            <li>
+                <a href="game.html">Játék</a>
+            </li>
+        </ul>
     </div>
-    <script src="game.js"></script>
+    <hr>
+    <div class="container">
+        <div class="top-row">
+            <div class="card">
+                <div class="img">
+                    <img src="Images/Brendan_Eich.jpg" alt="prog1">
+                </div>
+                <div class="container">
+                    <h4>Brendan Eich</h4>
+                    <p>A modern web alapítója</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="Images/Dennis_Ritchie.jpg" alt="prog1">
+                </div>
+                <div class="container">
+                    <h4>Dennis M. Ritchie</h4>
+                    <p>A C létrehozója</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-row">
+            <div class="card">
+                <div class="img reversed">
+                    <img src="Images/Linus-Torvalds_test.jpg" alt="prog1">
+                </div>
+                <div class="container">
+                    <h4>Linus Torvalds</h4>
+                    <p>A Linux atyja</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="Images/nits_card_image.jpg" alt="prog1">
+                </div>
+                <div class="container">
+                    <h4>Nits László</h4>
+                    <p>A kódok megtisztítója</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
