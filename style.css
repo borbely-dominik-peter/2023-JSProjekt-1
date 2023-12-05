@@ -1,25 +1,41 @@
-ul {
-  list-style-type: none;
+:root{
+  --primary-color: #f9f9f9;
+}
+
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body{
+  background-color: #1f1f1f;
+  color: var(--primary-color);
+}
+
+.navbar {
+  background-color: #111;
   overflow: hidden;
-  background-color: #333;
 }
 
-li {
+.navbar a {
   float: left;
-}
-
-li a {
-  display: block;
-  color: white;
+  color: var(--primary-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
 }
 
-li a:hover {
-  background-color: #111;
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: var(--primary-color);
 }
 
 .container {
@@ -42,7 +58,7 @@ li a:hover {
   width: 16%;
   height: 50%;
   margin: 0% 15% 0% 15%;
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
   display: flex;
   flex-direction: column;
 }
@@ -51,7 +67,7 @@ li a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .container div {
@@ -67,11 +83,14 @@ li a:hover {
 }
 
 .img{
-  width: 301px;
-  height: 304px;
+  width: 302px;
+  height: 305px;
 }
 
 .reversed {
   transform: rotateY(180deg);
 }
 
+.programmerTitle{
+  padding-bottom: 10px;
+}
