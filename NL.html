@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nits László, a kódok megtisztítója</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main">
-
+        <h1>Tiszta kód ellenörző</h1>
+        <h2>I.rész: változónév</h2>
+        <p>Figyelem: CSAK a változó nevét, típust és értéket ne vigyen be!</p>
+        <input type="text" id="VarIn"></input>
+        <button onclick="VarNameCheck();">Változó Ellenőrzése!</button>
+        <p id="VarRET"></p>
+        <br>
+        <h2>II.rész: Függvény tartalom ellenőrzés</h2>
+        <p>Figyelem: CSAK a függvény tartalmát szabad beírni, blokkképző operátort({},:) és függvény fejet NEM!</p>
+        <p>A sor végét ';' karakterrel jelölje</p>
+        <textarea id="FuncIn"></textarea><button onclick="FuncCheck();">Függvény Ellenőrzése!</button>
+        <p id="FuncRET"></p>
+        <br>
+        <h2>III. rész: Tiszta kód Kvíz</h2>
+        <p>Ebben a részben kérdéseket kell megválaszolni, a kérdésekre pontokat kapsz</p>
+        <p>A végén kiértékelést kapsz</p>
+        <form>
+            <p>Nyelv kérdés: Melyik Nits László kedvenc nyelve?</p>
+                <label for="N1">Pascal</label>
+                <input type="radio" name="Nyelv" id="N1" value="PS"><br>
+                <label for="N2">TypeScript</label>
+                <input type="radio" name="Nyelv" id="N2" value="TS"><br>
+                <label for="N3">JavaScript</label>
+                <input type="radio" name="Nyelv" id="N3" value="JS"><br>
+                <label for="N4">C#</label>
+                <input type="radio" name="Nyelv" id="N4" value="CS"><br>
+                <label for="N5">Python</label>
+                <input type="radio" name="Nyelv" id="N5" value="PY"><br>
+            <p>Case Kérdés: Melyik a megfelelő nyelv-case párosítás?</p>
+                <label for="C1">Python-Pascal</label>
+                <input type="radio" name="Case" id="C1" value="PYPascal"><br>
+                <label for="C2">JavaScript - Camel</label>
+                <input type="radio" name="Case" id="C2" value="JSCames"><br>
+                <label for="C3">C# - Snake</label>
+                <input type="radio" name="Case" id="C3" value="CSSnake"><br>
+            <p>Elmélet: Melyik NEM tiszta kód elv?</p>
+                <label for="C1">A sor csak 120 karakter hosszú lehet</label>
+                <input type="radio" name="Clean" id="C1" value="PYPascal"><br>
+                <label for="C2">Linq az szép, de nem mindig szabad</label>
+                <input type="radio" name="Clean" id="C2" value="JSCames"><br>
+                <label for="C3">A függvény maximum 5 sor hosszú lehet</label>
+                <input type="radio" name="Clean" id="C3" value="CSSnake"><br>
+                <label for="C4">A legszentebb operátor a feltételes(C#)</label>
+                <input type="radio" name="Clean" id="C4" value="CSSnake"><br>
+                <label for="C5">A legszentebb nyelv a Python</label>
+                <input type="radio" name="Clean" id="C5" value="CSSnake"><br>
+            <button onclick="QuizCheck();">Kvíz beküldése</button>
+            <p id="Answer1"></p>
+            <p id="Answer2"></p>
+            <p id="Answer3"></p>
+            <p id="sum"></p>
+        </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
