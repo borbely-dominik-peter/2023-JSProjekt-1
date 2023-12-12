@@ -64,17 +64,18 @@ function FuncCheck() {
         target.innerHTML = "A függvény tartalom megfelel Nits László Tiszta Kód elveinek!";
     }
 }
+document.querySelector("#CleanQuiz").addEventListener("submit", QuizCheck);
 
-function QuizCheck(){
-    preventDefault();
+function QuizCheck(event){
+    event.preventDefault();
     let points = 0
-    
+
     // 1-kérdéshez változók
     let Q1btns = document.querySelectorAll("input[name='Nyelv']");
     let Q1btn;
     let R1num = 1;
     let target1 = document.querySelector("#Answer1");
-    
+
     // 2-kérdéshez változók
     let Q2btns = document.querySelectorAll("input[name='Case']");
     let Q2btn;
@@ -85,7 +86,7 @@ function QuizCheck(){
     let Q3btns = document.querySelectorAll("input[name='Clean']");
     let Q3btn;
     let R3num = 1;
-    let target3 = document.querySelector("#Answer2");
+    let target3 = document.querySelector("#Answer3");
 
     Q1btns.forEach(element => {
         if (element.checked) {
@@ -146,8 +147,6 @@ function QuizCheck(){
             }
         }
         R3num++;
+        document.querySelector("#sum").innerHTML = points + "-ot kaptál";
     });
-
-    document.querySelector("#sum").innerHTML = points + "-ot kaptál";
-    
 }

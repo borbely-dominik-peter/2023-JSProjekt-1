@@ -24,7 +24,7 @@
         <h2>III. rész: Tiszta kód Kvíz</h2>
         <p>Ebben a részben kérdéseket kell megválaszolni, a kérdésekre pontokat kapsz</p>
         <p>A végén kiértékelést kapsz</p>
-        <form>
+        <form id="CleanQuiz">
             <p>Nyelv kérdés: Melyik Nits László kedvenc nyelve?</p>
                 <label for="N1">Pascal</label>
                 <input type="radio" name="Nyelv" id="N1" value="PS"><br>
@@ -45,16 +45,18 @@
                 <input type="radio" name="Case" id="C3" value="CSSnake"><br>
             <p>Elmélet: Melyik NEM tiszta kód elv?</p>
                 <label for="C1">A sor csak 120 karakter hosszú lehet</label>
-                <input type="radio" name="Clean" id="C1" value="PYPascal"><br>
+                <input type="radio" name="Clean" id="C1" value="Line120"><br>
                 <label for="C2">Linq az szép, de nem mindig szabad</label>
-                <input type="radio" name="Clean" id="C2" value="JSCames"><br>
+                <input type="radio" name="Clean" id="C2" value="Linq"><br>
                 <label for="C3">A függvény maximum 5 sor hosszú lehet</label>
-                <input type="radio" name="Clean" id="C3" value="CSSnake"><br>
+                <input type="radio" name="Clean" id="C3" value="Line5"><br>
                 <label for="C4">A legszentebb operátor a feltételes(C#)</label>
-                <input type="radio" name="Clean" id="C4" value="CSSnake"><br>
+                <input type="radio" name="Clean" id="C4" value="HolyC"><br>
                 <label for="C5">A legszentebb nyelv a Python</label>
-                <input type="radio" name="Clean" id="C5" value="CSSnake"><br>
-            <button onclick="QuizCheck();">Kvíz beküldése</button>
+                <input type="radio" name="Clean" id="C5" value="PyLies"><br>
+            <br>
+            <label for="QuizInBtn">Kvíz beküldése</label>
+            <input type="submit" id="QuizInBtn"></input>
             <p id="Answer1"></p>
             <p id="Answer2"></p>
             <p id="Answer3"></p>
