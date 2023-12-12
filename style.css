@@ -75,3 +75,41 @@ li a:hover {
   transform: rotateY(180deg);
 }
 
+#mainCode{
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1{
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 60px;
+  color: #111;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 45px;
+  color: #333;
+}
+
+#mainCode h1, h2, p, form{
+  text-align: center;
+}
+
+input[type="text"], textarea{
+  margin-left: 39%;
+}
+
+button{
+  margin-left: 10px;
+  height: 30px;
+  width: 150px;
+  color: #eee;
+  background-color: #404040;
+}
+
+#mainCode p{
+  font-size: 15px;
+  color: #6060ff;
+}
