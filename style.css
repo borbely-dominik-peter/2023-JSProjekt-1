@@ -94,3 +94,18 @@ body{
 .programmerTitle{
   padding-bottom: 10px;
 }
+
+[aria-label="active"]{
+  background-color: #2a2727;
+  color: var(--primary-color);
+}
+
+.code-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  height: 100%;
+  width: 100%;
+}
