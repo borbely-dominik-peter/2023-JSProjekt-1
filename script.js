@@ -58,10 +58,11 @@ function FuncCheck() {
             clean = false;
             msg = "A függvény csak 5 soros lehet maximum";
         }
-        if (charCount == 0) {
-            clean = false;
-            msg = "üres";
-        }
+
+    }
+    if (charCount == 0) {
+        clean = false;
+        msg = "üres";
     }
     if (clean === false) {
         target.innerHTML = msg;
@@ -77,25 +78,21 @@ function QuizCheck(event){
 
     // 1-kérdéshez változók
     let Q1btns = document.querySelectorAll("input[name='Nyelv']");
-    let Q1btn;
     let R1num = 1;
     let target1 = document.querySelector("#Answer1");
 
     // 2-kérdéshez változók
     let Q2btns = document.querySelectorAll("input[name='Case']");
-    let Q2btn;
     let R2num = 1;
     let target2 = document.querySelector("#Answer2");
 
-    // 2-kérdéshez változók
+    // 3-kérdéshez változók
     let Q3btns = document.querySelectorAll("input[name='Clean']");
-    let Q3btn;
     let R3num = 1;
     let target3 = document.querySelector("#Answer3");
 
     Q1btns.forEach(element => {
         if (element.checked) {
-            Q1btn = element;
             if (R1num == 1) {
                 target1.innerHTML = "Pascal a Nits kedvenc nyelve, +500 pont";
                 points += 500;
@@ -117,7 +114,6 @@ function QuizCheck(event){
 
     Q2btns.forEach(element => {
         if (element.checked) {
-            Q2btn = element;
             if (R2num == 1) {
                 target2.innerHTML = "NO, A python-ba snake case van, -500 pont";
                 points -= 500;
@@ -128,12 +124,12 @@ function QuizCheck(event){
                 target2.innerHTML = "REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE, -2000pont";
                 points += -2000;
             }
+        }    
         R2num++;
-    }});
+        });
 
     Q3btns.forEach(element => {
         if (element.checked) {
-            Q3btn = element;
             if (R3num == 1) {
                 target3.innerHTML = "Ez tiszta kód elv, -500 pont";
                 points -= 500;
@@ -152,6 +148,6 @@ function QuizCheck(event){
             }
         }
         R3num++;
-        document.querySelector("#sum").innerHTML = points + " pontot kaptál";
     });
+    document.querySelector("#sum").innerHTML = points + " pontot kaptál";
 }
