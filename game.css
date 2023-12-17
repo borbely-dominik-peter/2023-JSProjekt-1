@@ -1,0 +1,56 @@
+body{
+    background-color: #404040;
+}
+
+.main{
+    width: 95%;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+input{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+}
+
+.error{
+    color: #ff0000;
+    font-weight: bolder;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+#TextAreaBtn{
+    width: 150px;
+    height: 45px !important;
+}
+/* Navbar elemek bemásolva, jobb megoldást kell keresni majd */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}

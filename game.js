@@ -9,12 +9,26 @@ class char {
     
 }
 
-let S1E = new char(200, 50, 20, 20, "testENEMY1");
-let S1P = new char(500, 80, 10, 30, "test");
+function Story() {
+    alert("Welcome to ProgramWar!\nAfter choosing a character, you will face 3 enemies, which are related to your chosen character\nGood luck!");
+    let choice = Number(prompt("Choose your character[1-Brendan Eich,2-Dennis M. Ritchie,3-Linus Torvalds,4-Nits László]"));
+    if(choice === 1){
+        return 1;
+    }else if(choice === 2){
+        return 2;
+    }else if(choice === 3){
+        return 3;
+    }else if(choice === 4){
+        return 4
+    }else{
+        alert("You failed to choose a character, the game defaults to Nits");
+        return 4;
+    }
+}
 
-const EMAXHP = S1E.HP;
-const EMAXDEF = S1E.DEF;
-const PMAXDEF = S1P.DEF;
+/*let S1E = new char(200, 50, 20, 20, "testENEMY1");
+let S1P = new char(500, 80, 10, 30, "test");*/
+
 const Choices = [1,2,3];
 /*let PNAME = "test";
 let PHP = 500;
@@ -200,6 +214,42 @@ function battle(PNAME, PHP, PATK, PDEF, PMANA, ENAME, EHP, EATK, EDEF, EMANA){
     }
 }
 
+let choice = Story();
+
+let S1P;
+let S1E;
+let S2E;
+let S3E;
+
+if (choice === 1) {
+    S1P = new char(500, 50, 30, 20, "Brendan Eich");
+    S1E = new char(250, 35, 15, 22, "Pascal");
+    S2E = new char(400, 15, 10, 20, "Mozilla");
+    S3E = new char(243, 29, 16, 20, "Don't be evil");
+}
+else if(choice === 2){
+    S1P = new char(600, 40, 25, 20, "Dennis M. Ritchie");
+    S1E = new char(250, 35, 15, 22, "Pascal");
+    S2E = new char(420, 18, 13, 22, "Microsoft");
+    S3E = new char(522, 24, 19, 25, "Magic number");
+}
+else if(choice === 3){
+    S1P = new char(500, 50, 30, 20, "Linus Torvalds");
+    S1E = new char(250, 35, 15, 22, "Nvidia");
+    S2E = new char(400, 15, 10, 20, "Bitbucket");
+    S3E = new char(243, 29, 16, 20, "SCO");
+}
+else if(choice === 4){
+    S1P = new char(500000, 5000, 3000, 20, "Nits László");
+    S1E = new char(650, 55, 25, 100, "Python");
+    S2E = new char(1200, 35, 20, 150, "Salátakód");
+    S3E = new char(500, 12, 24, 100, "JS");
+}else{
+    alert(error);
+}
+const EMAXHP = S1E.HP;
+let EMAXDEF = S1E.DEF;
+let PMAXDEF = S1P.DEF;
 let winner = battle(S1P.Name, S1P.HP, S1P.ATK, S1P.DEF, S1P.MANA, S1E.Name, S1E.HP, S1E.ATK, S1E.DEF, S1E.MANA);
 
 // Win check
@@ -210,4 +260,29 @@ if (winner == "P"){
 }else{
     alert("error");
 }
-    
+
+EMAXDEF = S2E.DEF;
+PMAXDEF = S1P.DEF;
+
+winner2 = battle(S1P.Name, S1P.HP, S1P.ATK, S1P.DEF, S1P.MANA, S2E.Name, S2E.HP, S2E.ATK, S2E.DEF, S2E.MANA);
+
+if (winner2 == "P"){
+    alert("You win");
+}else if(winner2 == "E"){
+    alert("EVIL WINS");
+}else{
+    alert("error");
+}
+
+EMAXDEF = S3E.DEF;
+PMAXDEF = S1P.DEF;
+
+winner3 = battle(S1P.Name, S1P.HP, S1P.ATK, S1P.DEF, S1P.MANA, S3E.Name, S3E.HP, S3E.ATK, S3E.DEF, S3E.MANA);
+
+if (winner3 == "P"){
+    alert("You win");
+}else if(winner3 == "E"){
+    alert("EVIL WINS");
+}else{
+    alert("error");
+}   
