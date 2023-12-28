@@ -26,11 +26,6 @@ button{
     text-decoration: underline;
 }
 
-#TextAreaBtn{
-    width: 150px;
-    height: 45px !important;
-}
-/* Navbar elemek bemásolva, jobb megoldást kell keresni majd */
 ul {
   list-style-type: none;
   margin: 0;
@@ -53,4 +48,12 @@ li a {
 
 li a:hover {
   background-color: #111;
+}
+
+#reset{
+  width: 150px;
+  background-color: #000000;
+  color: #ffffff;
+  height: 30px;
+  margin: 0 auto;
 }
