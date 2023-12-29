@@ -101,7 +101,7 @@ function help(){
 
 // "AI" for deciding enemy's move
 function AI(EHP, EATK, EDEF, EMANA, EMAXHP) {
-    EChoice = -1 // 1 - atk, 2 - slice, 3 - shield, 4 - restore
+    let EChoice = -1 // 1 - atk, 2 - slice, 3 - shield, 4 - restore
     let randnum = Math.floor(Math.random() * 100) + 1;
     if (EMANA < 7 && randnum < 50){
         EChoice = 1;
