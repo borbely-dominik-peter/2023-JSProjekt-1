@@ -8,9 +8,14 @@ function expandOverlay(clickedCard) {
     overlay.style.left = "0";
     overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     overlay.style.zIndex = "10";
+    overlay.onclick = function (event) {
+        if (event.target.id === "overlay") {
+            closeOverlay(overlay);
+        }
+    };
     document.body.appendChild(overlay);
 
-    var cardRect = getCornersOfCard();
+    var cardRect = getCornersOfOverlay();
 
     var contentContainer = document.createElement("div");
     contentContainer.id = "content";
@@ -18,9 +23,9 @@ function expandOverlay(clickedCard) {
     contentContainer.style.height = 777 + "px";
     contentContainer.style.position = "fixed";
     contentContainer.style.top = cardRect[0] + "px";
-    contentContainer.style.left = cardRect[3] + "px";
-    contentContainer.style.bottom = cardRect[2] + "px";
     contentContainer.style.right = cardRect[1] + "px";
+    contentContainer.style.bottom = cardRect[2] + "px";
+    contentContainer.style.left = cardRect[3] + "px";
     contentContainer.style.zIndex = "11";
     contentContainer.style.overflowY = "auto";
     contentContainer.style.backgroundColor = "#1f1f1f";
@@ -28,38 +33,42 @@ function expandOverlay(clickedCard) {
     document.body.appendChild(contentContainer);
 
     var duplicatedContent = document.createElement("div");
-    duplicatedContent.className = "duplicated-content";
-    duplicatedContent.style.position = "static";
+    duplicatedContent.className = "infoCards";
+    duplicatedContent.style.position = "relative";
     duplicatedContent.style.cursor = "auto";
 
     var clonedImage = clickedCard.querySelector(".img img").cloneNode(true);
-    var clonedText = clickedCard.querySelector(".container.programmerTitle").cloneNode(true);
-    console.log(clonedText);
+    var clonedDivText = clickedCard.querySelector(".container.programmerTitle").cloneNode(true);
 
-    clonedImage.className = "img";
-    clonedText.className = "container programmerTitle";
+    var divImage = document.createElement("div");
 
-    duplicatedContent.appendChild(clonedImage);
-    duplicatedContent.appendChild(clonedText);
+    divImage.className = "img";
+
+    clonedDivText.className = "container programmerTitle";
+
+    divImage.appendChild(clonedImage);
+
+    duplicatedContent.appendChild(divImage);
+    duplicatedContent.appendChild(clonedDivText);
+
+    var corners = moveCardValues(clickedCard);
+
+    duplicatedContent.style.top = corners[0] + "px";
+    duplicatedContent.style.right = corners[1] + "px";
+    duplicatedContent.style.bottom = corners[2] + "px";
+    duplicatedContent.style.left = corners[3] + "px";
 
     contentContainer.appendChild(duplicatedContent);
+}
 
-    var close = document.createElement("button");
-    close.id = "close";
-    close.innerHTML = "Close";
-    close.style.position = "absolute";
-    close.style.top = "0";
-    close.style.right = "0";
-    close.style.zIndex = "13";
-    close.onclick = function () {
-        document.body.removeChild(overlay);
-        document.body.removeChild(contentContainer);
-    };
-    contentContainer.appendChild(close);
+function closeOverlay(overlay) {
+    document.body.removeChild(overlay);
+    var contentContainer = document.getElementById("content");
+    document.body.removeChild(contentContainer);
 }
 
 
-function getCornersOfCard() {
+function getCornersOfOverlay(){
     var topRightCard = document.getElementById("top-right");
     var bottomLeftCard = document.getElementById("bottom-left");
     var topRightCardRect = topRightCard.getBoundingClientRect();
@@ -69,5 +78,24 @@ function getCornersOfCard() {
     corners.push(topRightCardRect.right);
     corners.push(bottomLeftCardRect.bottom);
     corners.push(bottomLeftCardRect.left);
+    return corners;
+}
+
+function moveCardValues(clickedCard){
+    var corners;
+    switch (clickedCard.id) {
+        case "top-left":
+            corners = [0, 0, 0, 0]
+            break;
+        case "top-right":
+            corners = [0, 0, 0, 874]
+            break;
+        case "bottom-left":
+            corners = [403, 0, 0, 0]
+            break;
+        case "bottom-right":
+            corners = [403, 0, 0, 874]
+            break;
+    }
     return corners;
 }
