@@ -51,14 +51,17 @@ function expandOverlay(clickedCard) {
     duplicatedContent.appendChild(divImage);
     duplicatedContent.appendChild(clonedDivText);
 
-    var corners = moveCardValues(clickedCard);
+    var corners = moveCardValues(clickedCard, duplicatedContent);
 
-    duplicatedContent.style.top = corners[0] + "px";
-    duplicatedContent.style.right = corners[1] + "px";
-    duplicatedContent.style.bottom = corners[2] + "px";
-    duplicatedContent.style.left = corners[3] + "px";
+    // duplicatedContent.style.top = corners[0] + "px";
+    // duplicatedContent.style.right = corners[1] + "px";
+    // duplicatedContent.style.bottom = corners[2] + "px";
+    // duplicatedContent.style.left = corners[3] + "px";
+    
+
 
     contentContainer.appendChild(duplicatedContent);
+    contentContainer.appendChild(addContent(clickedCard));
 }
 
 function closeOverlay(overlay) {
@@ -81,21 +84,74 @@ function getCornersOfOverlay(){
     return corners;
 }
 
-function moveCardValues(clickedCard){
-    var corners;
+function moveCardValues(clickedCard, duplicatedContent){
     switch (clickedCard.id) {
         case "top-left":
-            corners = [0, 0, 0, 0]
+            duplicatedContent.style.float = "left";
             break;
         case "top-right":
-            corners = [0, 0, 0, 874]
+            duplicatedContent.style.float = "right";
             break;
         case "bottom-left":
-            corners = [403, 0, 0, 0]
+            duplicatedContent.style.float = "left";
+            duplicatedContent.style.top = 403 + "px"
             break;
         case "bottom-right":
-            corners = [403, 0, 0, 874]
+            duplicatedContent.style.float = "right";
+            duplicatedContent.style.top = 403 + "px"
             break;
     }
-    return corners;
+}
+
+function addContent(clickedCard){
+    var content = document.createElement("p");
+    content.className = "content";
+
+    switch (clickedCard.id) {
+        case "top-left":
+            content.innerHTML = "<h1>Brendan Eich</h1>";
+            break;
+        case "top-right":
+            content.innerHTML = "<h1>Dennis M. Ritchie</h1>";
+            break;
+        case "bottom-left":
+            content.innerHTML = "<h1>Linus Torvalds</h1>";
+            break;
+        case "bottom-right":
+            content.innerHTML = "<h1>Nits László</h1>";
+            break;
+    }
+
+    // Brendan Eich
+    var text = document.createElement("p");
+    text.innerHTML = "Brendan Eich amerikai programozó, a JavaScript programnyelv megteremtője. Társalapítója a Mozilla projektnek, a Mozilla Alapítványnak és a Mozilla Corporationnak. Ez utóbbi műszaki igazgatója és rövid ideig vezérigazgatója is volt. 2016-tól a Brave Software nevű startup alapítója és vezérigazgatója.";
+    content.appendChild(text);
+
+    var text2 = document.createElement("p");
+    text2.innerHTML = "A Silicon Graphics nevű cégnél dolgozott, majd 1995-ben a Netscape munkatársa lett, ahol JavaScript programnyelv megalkotása lett a feladata. 1998-ban a Mozilla Alapítvány egyik alapítója volt és a szervezetben ő lett a szoftverarchitektúráért felelős vezető.";
+    content.appendChild(text2);
+
+    // Dennis M. Ritchie
+    var text3 = document.createElement("p");
+    text3.innerHTML = "Dennis MacAlistair Ritchie (Bronxville, New York állam, 1941. szeptember 9. – Berkeley Heights, New Jersey, 2011. október 12.[1]) amerikai számítógéptudós. Legismertebb a C programozási nyelv kifejlesztéséről, és a Unix kifejlesztésében is komoly érdemei voltak.";
+    content.appendChild(text3);
+
+    var text4 = document.createElement("p");
+    text4.innerHTML = "Bronxville-ben született, majd fizikát és alkalmazott matematikát tanult, diplomáját a Harvard Egyetemen szerezte. Pályáját 1967-ben a Bell Labs|Bell Labs' Computing Sciences Research Centernél kezdte, végül a Lucent Technologies|Lucent Technologies' System Software Research Department vezetője, 2007-es nyugállományba vonulásáig.";
+    content.appendChild(text4);
+
+    // Linus Torvalds
+    var text5 = document.createElement("p");
+    text5.innerHTML = "Linus Benedict Torvalds (Helsinki, 1969. december 28.) a népszerű, Unix-szerű operációs rendszer, a Linux fejlesztésének elindítója, jelenleg is egyik fő fejlesztője.";
+    content.appendChild(text5);
+
+    var text6 = document.createElement("p");
+    text6.innerHTML = "1997 eleje óta az USA-ban (Santa Clara) élnek. Jelenleg Linus munkaadója a Linux Foundation, amely a korábbi OSDL (Open Source Development Labs) és a Free Standards Group egyesüléséből jött létre. A Linux Foundation az ipar fontos szervezetei, cégei által fenntartott alapítvány, amely anyagi hátteret teremt a Linux kernel fejlesztésének.";
+    content.appendChild(text6);
+
+    // Nits László
+    var text7 = document.createElement("p");
+    text7.innerHTML = "";
+
+    return content;
 }
