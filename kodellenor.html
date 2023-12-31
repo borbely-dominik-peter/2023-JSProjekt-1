@@ -8,18 +8,28 @@
     <title>Kód Ellenőrző</title>
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">Fő oldal</a>
+        <a href="kodellenor.html" aria-label="active">Kód Ellenőrző</a>
+        <a href="game.html">Játék</a>
+    </div>
     <div>
-        <ul>
-            <li>
-                <a href="index.html">Fő oldal</a>
-            </li>
-            <li>
-                <a href="kodellenor.html" aria-label="active">Kód Ellenőrző</a>
-            </li>
-            <li>
-                <a href="game.html">Játék</a>
-            </li>
-        </ul>
+        <div class="code-container">
+            <div class="main-column">
+                <textarea id="code" name="code" rows="10" cols="50"></textarea>
+                <button onclick="checkCode()">Ellenőrzés</button>
+            </div>
+            <div>
+                <div class="output">
+                    <p id="output">terwtwtw</p>
+                </div>
+            </div>
+            <div>
+                <div class="output">
+                    <p id="output2">rrqqre</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="mainCode">
         <h1>Tiszta kód ellenörző</h1>
