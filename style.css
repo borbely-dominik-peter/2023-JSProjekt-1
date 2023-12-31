@@ -160,7 +160,7 @@ body{
   margin: 0 auto;
 }
 
-h1{
+.kodellenor h1{
   font-weight: bolder;
   text-decoration: underline;
   font-size: 60px;
