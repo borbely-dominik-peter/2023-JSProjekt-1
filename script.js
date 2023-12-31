@@ -402,4 +402,4 @@ function QuizCheck(event){
         R3num++;
     });
     document.querySelector("#sum").innerHTML = points + " pontot kaptál";
-}
+}}
