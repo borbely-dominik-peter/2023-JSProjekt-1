@@ -8,6 +8,7 @@ function expandOverlay(clickedCard) {
     overlay.style.left = "0";
     overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     overlay.style.zIndex = "10";
+   
     overlay.onclick = function (event) {
         if (event.target.id === "overlay") {
             closeOverlay(overlay);
@@ -19,18 +20,23 @@ function expandOverlay(clickedCard) {
 
     var contentContainer = document.createElement("div");
     contentContainer.id = "content";
-    contentContainer.style.width = 1178 + "px";
-    contentContainer.style.height = 777 + "px";
+    contentContainer.style.width = 0;
+    contentContainer.style.height = 0;
+    contentContainer.style.transition = "All ease 1s";
     contentContainer.style.position = "fixed";
     contentContainer.style.top = cardRect[0] + "px";
     contentContainer.style.right = cardRect[1] + "px";
     contentContainer.style.bottom = cardRect[2] + "px";
     contentContainer.style.left = cardRect[3] + "px";
     contentContainer.style.zIndex = "11";
-    contentContainer.style.overflowY = "auto";
+    contentContainer.style.overflowY = "hidden";
     contentContainer.style.backgroundColor = "#1f1f1f";
     
     document.body.appendChild(contentContainer);
+    
+
+    
+
 
     var duplicatedContent = document.createElement("div");
     duplicatedContent.className = "infoCards";
@@ -51,23 +57,25 @@ function expandOverlay(clickedCard) {
     duplicatedContent.appendChild(divImage);
     duplicatedContent.appendChild(clonedDivText);
 
-    var corners = moveCardValues(clickedCard, duplicatedContent);
-
-    // duplicatedContent.style.top = corners[0] + "px";
-    // duplicatedContent.style.right = corners[1] + "px";
-    // duplicatedContent.style.bottom = corners[2] + "px";
-    // duplicatedContent.style.left = corners[3] + "px";
-    
-
+    moveCardValues(clickedCard, duplicatedContent);
 
     contentContainer.appendChild(duplicatedContent);
     contentContainer.appendChild(addContent(clickedCard));
+    setTimeout(function() {
+        contentContainer.style.width = 1178 + "px";
+        contentContainer.style.height = 777 + "px";
+      }, 100);
 }
 
 function closeOverlay(overlay) {
     document.body.removeChild(overlay);
     var contentContainer = document.getElementById("content");
-    document.body.removeChild(contentContainer);
+    contentContainer.style.width = 0;
+    contentContainer.style.height = 0;
+    setTimeout(function() {
+        document.body.removeChild(contentContainer);
+      }, 1000);
+    
 }
 
 
