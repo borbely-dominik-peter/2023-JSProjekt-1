@@ -208,7 +208,7 @@ function addContent(person, contentContainer){
             contentContainer.appendChild(header);
             allText.push("Nits László a fő védelmezője a tiszta kód elvének, közismerten a legtehetségesebb objektum orientált programozó. Elterjedt tény róla, hogy Chuck Norris leglelkesebb hívei közé tartozik.");
             allText.push("Programozási remekei tartozik az LNKO számító program (Python és C# nyelven is), az osztó harmonikus szám kereső program és hasonló matematikai problémákat megoldó programok. Tanítványai közül rengetegen értek el sikereket, ami kiváló tanítási képességét támasztja alá.");
-            allText.push("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur mollis ipsum, a laoreet ex ultrices in. Morbi sed viverra purus. Aliquam aliquet in ante eu cursus. Cras sit amet dolor justo. Nulla eu ex a lectus dapibus malesuada eu ac ante. Maecenas rutrum finibus lacus non finibus. Nulla hendrerit aliquam metus, a dapibus ex efficitur sed. Fusce rutrum libero ut ligula tempus, a vehicula arcu condimentum. Nunc feugiat consequat eros, id pharetra libero tincidunt nec. Quisque et risus nunc.");
+            allText.push("Nits László jellegzetes torokköszörülését már mérföldekről meghallani, frekvenciája és hangszíne nagyon egyedülálló. Még számos más különleges tulajdonsága van, külsőleg és belsőleg is, például páratlan és elegáns öltözködési módja, hihetetlen viccei, leírhatatlan tanítási képességei.");
             for (var i = 0; i < allText.length; i++) {
                 var paragraph = document.createElement("div");
                 paragraph.innerHTML = allText[i];
