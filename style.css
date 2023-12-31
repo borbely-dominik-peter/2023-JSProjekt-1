@@ -130,13 +130,27 @@ body{
 
 .content{
   position: relative;
-  padding: 20px;
+  padding: 5px 0px 5px 20px;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1.5;
   text-align: justify;
   max-width: 800px;
+  overflow: hidden;
+  cursor: auto;
+  background-color: #1f1f1f;
+}
+
+.divFormat{
+  position: relative;
+  padding: 5px 0px 5px 20px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 94%;
   overflow: hidden;
   cursor: auto;
   background-color: #1f1f1f;
