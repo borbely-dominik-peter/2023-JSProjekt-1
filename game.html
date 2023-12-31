@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Főoldal</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="game.css">
+    <title>ProgramWar</title>
 </head>
 <body>
     <div class="navbar">
@@ -13,9 +14,9 @@
         <a href="game.html"  aria-label="active">Játék</a>
     </div>
     <div class="main">
-        <!--TESZTELÉS A JS-re-->
-        <span class="load" onload="new Char(500,80,10,30, 'Player')"></span>
-        <span class="load" onload="new Char(200,40,10,20, 'Enemy')"></span>
+        <h1>ProgramWar</h1>
+        <h2>A játék újraindításához kattintson a gombra vagy töltse újra az oldalt</h2>
+        <input type="button" value="újra" id="reset" onclick="Reset();"></input>
     </div>
     <script src="game.js"></script>
 </body>

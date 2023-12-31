@@ -141,6 +141,7 @@ body{
   cursor: auto;
 }
 
+
 .divFormat{
   position: relative;
   padding: 5px 0px 5px 20px;
@@ -152,4 +153,71 @@ body{
   max-width: 94%;
   overflow: hidden;
   cursor: auto;
+  
+#mainCode{
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1{
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 60px;
+  color: #111;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 45px;
+  color: #333;
+}
+
+#mainCode h1, h2, p, form{
+  text-align: center;
+}
+
+input[type="text"], textarea{
+  margin-left: 39%;
+}
+
+textarea{
+  border: 0px solid black;
+  border-radius: 5%;
+  height: 45px !important;
+}
+
+button{
+  margin-left: 10px;
+  height: 30px;
+  width: 150px;
+  color: #eee;
+  background-color: #404040;
+}
+
+#TextAreaBtn{
+  height: 45px !important;
+  position: relative;
+  bottom: 7px;
+}
+
+#mainCode p{
+  font-size: 15px;
+  color: #6060ff;
+}
+
+
+.Imp{
+  color: red;
+  font-weight: bolder;
+  text-decoration: double;
+}
+
+.Q{
+  font-size: 25px !important;
+  color: #20ee20 !important;
+  font-style: italic;
+}
+
+label{
+  min-width: 650px;
 }
