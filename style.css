@@ -139,7 +139,6 @@ body{
   max-width: 800px;
   overflow: hidden;
   cursor: auto;
-  background-color: #1f1f1f;
 }
 
 .divFormat{
@@ -153,5 +152,4 @@ body{
   max-width: 94%;
   overflow: hidden;
   cursor: auto;
-  background-color: #1f1f1f;
 }

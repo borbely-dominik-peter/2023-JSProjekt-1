@@ -134,9 +134,9 @@ function addContent(person, contentContainer){
             var header = document.createElement("h1");
             header.innerHTML = person;
             content.appendChild(header);
-            allText.push("Brendan Eich amerikai programozó, a JavaScript programnyelv megteremtője. Társalapítója a Mozilla projektnek, a Mozilla Alapítványnak és a Mozilla Corporationnak. Ez utóbbi műszaki igazgatója és rövid ideig vezérigazgatója is volt. 2016-tól a Brave Software nevű startup alapítója és vezérigazgatója.");
-            allText.push("A Silicon Graphics nevű cégnél dolgozott, majd 1995-ben a Netscape munkatársa lett, ahol JavaScript programnyelv megalkotása lett a feladata. 1998-ban a Mozilla Alapítvány egyik alapítója volt és a szervezetben ő lett a szoftverarchitektúráért felelős vezető. 2014-ben az Alapítvány műszaki vezérigazgatói posztjáról lépett elő az első számú vezetői posztra");
-            allText.push("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur mollis ipsum, a laoreet ex ultrices in. Morbi sed viverra purus. Aliquam aliquet in ante eu cursus. Cras sit amet dolor justo. Nulla eu ex a lectus dapibus malesuada eu ac ante. Maecenas rutrum finibus lacus non finibus. Nulla hendrerit aliquam metus, a dapibus ex efficitur sed. Fusce rutrum libero ut ligula tempus, a vehicula arcu condimentum. Nunc feugiat consequat eros, id pharetra libero tincidunt nec. Quisque et risus nunc.");
+            allText.push("Brendan Eich, az amerikai programozó, rendkívül jelentős szerepet játszott a számítástechnika világában. Leginkább a JavaScript programnyelv atyjaként ismert, melyet 1995-ben hozott létre, amikor még a Netscape munkatársa volt. Egykori Silicon Graphics tapasztalatával és elkötelezettségével Eich a Mozilla projekt és a Mozilla Corporation társalapítója lett, ő volt az alapítvány szoftverarchitektúráért felelős vezetője.");
+            allText.push("Az informatikai szektorban betöltött szerepe tovább bővült, amikor 2016-ban létrehozta a Brave Software nevű startupot, ahol vezérigazgatóként irányította a vállalkozást. Eich évtizedek óta kulcsszereplője a webfejlesztés és böngészőtechnológiák területének, és elhivatottan járult hozzá az internetes technológiák fejlődéséhez és elterjedéséhez.");
+            allText.push("Eich karrierje kivételesen sokszínű, hiszen a Silicon Graphics mellett a Netscape-nél is dolgozott. A 2014-es évben, a Mozilla Alapítványban eltöltött időszak után, elindította a Brave Software-t, ahol a böngészőtechnológia és online adatvédelem terén mutatott úttörő munkája emelte ki. Eich kiemelkedő szakmai hozzájárulása mellett elkötelezett a nyílt forráskódú projektek iránt, elősegítve az internetes tartalom és alkalmazások fejlődését.");
             for (var i = 0; i < allText.length; i++) {
                 var paragraph = document.createElement("div");
                 paragraph.innerHTML = allText[i];
@@ -158,9 +158,9 @@ function addContent(person, contentContainer){
             var header = document.createElement("h1");
             header.innerHTML = person;
             content.appendChild(header);
-            allText.push("Dennis MacAlistair Ritchie (Bronxville, New York állam, 1941. szeptember 9. – Berkeley Heights, New Jersey, 2011. október 12.[1]) amerikai számítógéptudós. Legismertebb a C programozási nyelv kifejlesztéséről, és a Unix kifejlesztésében is komoly érdemei voltak.");
-            allText.push("Bronxville-ben született, majd fizikát és alkalmazott matematikát tanult, diplomáját a Harvard Egyetemen szerezte. Pályáját 1967-ben a Bell Labs|Bell Labs' Computing Sciences Research Centernél kezdte, végül a Lucent Technologies|Lucent Technologies' System Software Research Department vezetője, 2007-es nyugállományba vonulásáig.");
-            allText.push("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur mollis ipsum, a laoreet ex ultrices in. Morbi sed viverra purus. Aliquam aliquet in ante eu cursus. Cras sit amet dolor justo. Nulla eu ex a lectus dapibus malesuada eu ac ante. Maecenas rutrum finibus lacus non finibus. Nulla hendrerit aliquam metus, a dapibus ex efficitur sed. Fusce rutrum libero ut ligula tempus, a vehicula arcu condimentum. Nunc feugiat consequat eros, id pharetra libero tincidunt nec. Quisque et risus nunc.");
+            allText.push("Dennis MacAlistair Ritchie, az 1941-ben Bronxville-ben született amerikai számítógéptudós, rendkívüli hozzájárulást tett a számítástechnika fejlődéséhez. Legjelentősebb teljesítményei közé tartozik a C programozási nyelv kifejlesztése és a Unix operációs rendszer fejlesztésében játszott kulcsszerep.");
+            allText.push("Fizika és alkalmazott matematika tanulmányait a Harvard Egyetemen végezte el, majd 1967-ben csatlakozott a Bell Labs Computing Sciences Research Centerhez. Végül a Lucent Technologies System Software Research Department vezetőjévé vált, és 2007-ben vonult nyugdíjba. Ritchie öröksége a szoftvertervezés és programozás terén mély nyomokat hagyott maga után, elismerve azt a technológiai forradalmat, amelyben részt vett.");
+            allText.push("Ritchie, aki a számítógépészeti világ egyik ikonikus alakja lett, nem csupán a C nyelvvel és a Unix rendszerrel hagyta örök emlékét, hanem a szoftvertervezés és az operációs rendszer-architektúrák terén is. Harvardi tanulmányai után, 1967-ben csatlakozott a Bell Labs-hez, ahol pályafutása során számos innovációt vezetett be. Az általa kifejlesztett C nyelv széles körben elterjedt és az informatika alapjává vált, míg a Unix rendszer a megbecsült számítógépes operációs rendszerek egyik alapkövévé vált. Ritchie neve örökre összefonódik a modern számítógépészettel és a programozással.");
             for (var i = 0; i < allText.length; i++) {
                 var paragraph = document.createElement("div");
                 paragraph.innerHTML = allText[i];
@@ -176,51 +176,67 @@ function addContent(person, contentContainer){
             }
             break;
         case "Linus Torvalds":
-            allText.push("Linus Benedict Torvalds (Helsinki, 1969. december 28.) a népszerű, Unix-szerű operációs rendszer, a Linux fejlesztésének elindítója, jelenleg is egyik fő fejlesztője.");
-            allText.push("1997 eleje óta az USA-ban (Santa Clara) élnek. Jelenleg Linus munkaadója a Linux Foundation, amely a korábbi OSDL (Open Source Development Labs) és a Free Standards Group egyesüléséből jött létre. A Linux Foundation az ipar fontos szervezetei, cégei által fenntartott alapítvány, amely anyagi hátteret teremt a Linux kernel fejlesztésének.");
-            allText.push("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur mollis ipsum, a laoreet ex ultrices in. Morbi sed viverra purus. Aliquam aliquet in ante eu cursus. Cras sit amet dolor justo. Nulla eu ex a lectus dapibus malesuada eu ac ante. Maecenas rutrum finibus lacus non finibus. Nulla hendrerit aliquam metus, a dapibus ex efficitur sed. Fusce rutrum libero ut ligula tempus, a vehicula arcu condimentum. Nunc feugiat consequat eros, id pharetra libero tincidunt nec. Quisque et risus nunc.");
+            var paddingList = [[60, 0, 5, 20], [175, 0, 5, 20], [300, 0, 5, 350]]
+            var header = document.createElement("h1");
+            header.innerHTML = person;
+            header.style.position = "absolute";
+            header.style.paddingLeft = 20 + "px"; 
+            header.style.marginRight = "a";
+            var content = document.createElement("div");
+            contentContainer.appendChild(header);
+            allText.push("Linus Torvalds, a finn számítógéptudós, 1969. december 28-án született Helsinkiben. Leghíresebb a Linux operációs rendszer megalkotásáról, amit 1991-ben indított el, és amely a világ legnépszerűbb nyílt forráskódú operációs rendszere lett. Torvalds a Helsinkin Egyetemen tanult, ahol informatikai mérnöki diplomát szerzett.");
+            allText.push("A Linux projektet a tanulmányai során kezdte, és rövid idő alatt globális közösséggé nőtte ki magát. Az alázat és az együttműködés elkötelezett híveként Torvalds a Linux fejlesztése során szilárd alapot teremtett a nyílt forráskódú mozgalomnak.");
+            allText.push("Torvalds, az informatikai világban korszakalkotó alak, nem csupán a Linux operációs rendszer atyja, hanem a nyílt forráskódú közösségi fejlesztés elkötelezett támogatója is. Az 1991-ben indított Linux gyorsan népszerűvé vált, és globális közösséget hozott létre. Linus, aki a Helsinkin Egyetemen informatikai mérnöki diplomát szerzett, az alázat és az együttműködés elveit vallva irányította a projektet. A Linux nem csupán egy operációs rendszer, hanem a szabad szoftverek és a nyílt forráskód szellemének szimbóluma, melyet Torvalds elszántsága és vezetése örökre beírt a számítástechnika történetébe.");
             for (var i = 0; i < allText.length; i++) {
                 var paragraph = document.createElement("div");
                 paragraph.innerHTML = allText[i];
-                if (i < 1){
-                    paragraph.classList = "divFormat";
-                    contentContainer.appendChild(paragraph)
-                }
-                else{
-                    content.appendChild(paragraph);
-                }
-                
-                content.appendChild(document.createElement("br"));
+                paragraph = setProperties(paragraph, paddingList[i]);
+                contentContainer.appendChild(paragraph)
             }
-            var content = document.createElement("div");
             contentContainer.appendChild(content);
             content.className = "content";
-            var header = document.createElement("h1");
-            header.innerHTML = person;
-            content.appendChild(header);
+            
             break;
         case "Nits László":
+            var paddingList = [[60, 0, 5, 20], [150, 0, 5, 20], [270, 253, 5, 20]]
+            var header = document.createElement("h1");
+            header.innerHTML = person;
+            header.style.position = "absolute";
+            header.style.paddingLeft = 20 + "px"; 
+            header.style.marginRight = "a";
+            var content = document.createElement("div");
+            contentContainer.appendChild(header);
             allText.push("Nits László a fő védelmezője a tiszta kód elvének, közismerten a legtehetségesebb objektum orientált programozó. Elterjedt tény róla, hogy Chuck Norris leglelkesebb hívei közé tartozik.");
             allText.push("Programozási remekei tartozik az LNKO számító program (Python és C# nyelven is), az osztó harmonikus szám kereső program és hasonló matematikai problémákat megoldó programok. Tanítványai közül rengetegen értek el sikereket, ami kiváló tanítási képességét támasztja alá.");
             allText.push("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur mollis ipsum, a laoreet ex ultrices in. Morbi sed viverra purus. Aliquam aliquet in ante eu cursus. Cras sit amet dolor justo. Nulla eu ex a lectus dapibus malesuada eu ac ante. Maecenas rutrum finibus lacus non finibus. Nulla hendrerit aliquam metus, a dapibus ex efficitur sed. Fusce rutrum libero ut ligula tempus, a vehicula arcu condimentum. Nunc feugiat consequat eros, id pharetra libero tincidunt nec. Quisque et risus nunc.");
             for (var i = 0; i < allText.length; i++) {
                 var paragraph = document.createElement("div");
                 paragraph.innerHTML = allText[i];
-                if (i > 1){
-                    paragraph.classList = "divFormat";
+                for (var i = 0; i < allText.length; i++) {
+                    var paragraph = document.createElement("div");
+                    paragraph.innerHTML = allText[i];
+                    paragraph = setProperties(paragraph, paddingList[i]);
                     contentContainer.appendChild(paragraph)
                 }
-                else{
-                    content.appendChild(paragraph);
-                }
-                
-                content.appendChild(document.createElement("br"));
             }
+            contentContainer.appendChild(content);
+            content.className = "content";
             break;
     }       
 
 
 }
+
+function setProperties(paragraph, paddingValues){
+    paragraph.classList = "divFormat";
+    paragraph.style.position = "absolute";
+    paragraph.style.paddingTop = paddingValues[0] + "px";
+    paragraph.style.paddingRight = paddingValues[1] + "px";
+    paragraph.style.paddingBottom = paddingValues[2] + "px";
+    paragraph.style.paddingLeft = paddingValues[3] + "px";
+    return paragraph;
+}
+
 function currPerson(clickedCard){
     var person;
     switch (clickedCard.id) {
